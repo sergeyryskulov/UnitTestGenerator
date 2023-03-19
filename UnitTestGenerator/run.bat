@@ -1,0 +1,1 @@
+UnitTestGenerator.exe ClassA IClassBInterface IClassCInterface
