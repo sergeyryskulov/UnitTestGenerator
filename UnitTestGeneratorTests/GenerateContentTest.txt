@@ -1,0 +1,23 @@
+﻿private Mock<ITestInterface1> _testInterface1;
+private Mock<ITestInterface2> _testInterface2;
+
+[TestInitialize]
+public void InitMocks()
+{
+_testInterface1 = new Mock<ITestInterface1>();
+_testInterface2 = new Mock<ITestInterface2>();
+}
+
+private TestClass CreateTestClass()
+{
+return new TestClass(
+_testInterface1.Object,
+_testInterface2.Object
+);
+}
+
+
+void Test()
+{
+var testClass = CreateTestClass(); 
+}
